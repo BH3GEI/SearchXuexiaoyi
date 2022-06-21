@@ -17,9 +17,9 @@ import win32gui, win32api
 
 
 #OCR的相关参数
-APP_ID = '26485327'
-API_KEY = '6OiLfdhbNupkgwZXmLrRTg0T'
-SECRET_KEY = '72ZhXU7U9oy7jGPhuFEIMCKwMZmDgYUG'
+APP_ID = 'xxx'
+API_KEY = 'xxx'
+SECRET_KEY = 'xxx'
 client = AipOcr(APP_ID, API_KEY, SECRET_KEY)
 fname = 'grab_clipboard.png'
 md5_old = ''
@@ -27,7 +27,7 @@ md5_old = ''
 order0 = 'adb connect 127.0.0.1:5555'  # 获取连接设备
 os.system(order0)
 
-print("【💗💗祝姐姐考试顺利，金榜题名💗💗】")
+print("【💗💗祝考试顺利，金榜题名💗💗】")
 
 def readClipboardOCRAndPaste():
     # 检测到剪切板有新增图片后复制图像内文本到剪切板
@@ -59,7 +59,7 @@ def readClipboardOCRAndPaste():
             print("[题目内容：]")
             print("🖤"+textResult+"🖤")
             pyperclip.copy(textResult)
-            print("[✅题目内容已经帮姐姐复制到剪切板了呢ヾ(≧▽≦*)o]")
+            print("[✅题目内容已经复制到剪切板了呢ヾ(≧▽≦*)o]")
             md5_old = md5_new
             textPaste()
         time.sleep(1)
